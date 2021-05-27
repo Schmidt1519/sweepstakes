@@ -1,5 +1,5 @@
-class MarketingFirmCreator:
+import user_interface
 
-    def __init__(self):
 
-    def choose_manager_type(self):  # MarketingFirm
+def choose_manager_type(self):  # MarketingFirm
+    user_interface.sweepstakes_management()
