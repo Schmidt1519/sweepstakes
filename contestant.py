@@ -1,5 +1,5 @@
 import user_interface
-# import sweepstake
+
 
 class Contestant:
 

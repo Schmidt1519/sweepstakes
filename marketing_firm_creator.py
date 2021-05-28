@@ -12,15 +12,15 @@ class MarketingFirmCreator:
         if user_input == 1:
             # print('Stack management')  # test
             stack_manager = SweepstakesStackManager()
-            marketing_firm = MarketingFirm(stack_manager)
-            sweepstake = marketing_firm.create_sweepstakes()
-            stack_manager.insert_sweepstakes(sweepstake)
+            marketing_manager = MarketingFirm(stack_manager)  # dependency injection used so it has access to sweepstakes and contestant
+            sweepstake = marketing_manager.create_sweepstakes()
+            stack_manager.insert_sweepstakes(sweepstake)  # dependency injection used to add newly created sweepstakes to the stack.
 
         elif user_input == 2:
             # print('Queue management')  # test
             queue_manager = SweepstakesQueueManager()
-            marketing_firm = MarketingFirm(queue_manager)
-            sweepstake = marketing_firm.create_sweepstakes()
-            queue_manager.insert_sweepstakes(sweepstake)
+            marketing_manager = MarketingFirm(queue_manager)  # dependency injection used so it has access to sweepstakes and contestant.
+            sweepstake = marketing_manager.create_sweepstakes()
+            queue_manager.insert_sweepstakes(sweepstake)  # dependency injection used to add newly created sweepstakes to the queue.
         else:
             self.choose_manager_type()

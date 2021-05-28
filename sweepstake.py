@@ -17,7 +17,7 @@ class Sweepstake:
         first_name = input('First name: ')
         last_name = input('Last name: ')
         email_address = input('Email address: ')
-        registration_number = random.randint(1000, 10000)
+        registration_number = random.randint(100, 1000)
         self.contestants[registration_number] = Contestant(first_name, last_name, email_address, registration_number)
 
     def pick_winner(self):   # randomly select one contestant object
@@ -28,7 +28,6 @@ class Sweepstake:
 
         self.unregister(contestant[0])
         self.contestant_notification(f'{contestant[1].first_name} {contestant[1].last_name} has won the sweepstake. Please try again by registering in our future sweepstakes!\n')
-
         return is_winner
 
     def print_contestant_info(self, contestant):  # call a method on user_interface called “display_user_information”

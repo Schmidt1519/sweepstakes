@@ -1,11 +1,7 @@
 import user_interface
-from marketing_firm import MarketingFirm
 from contestant import Contestant
 from sweepstake import Sweepstake
 from marketing_firm_creator import MarketingFirmCreator
-
-# marketing_firm = MarketingFirm()
-# marketing_firm_creator = MarketingFirmCreator()
 
 # Create contestants
 contestant_1 = Contestant('Leighton', 'Schmidt', 'leighton@gmail.com', 100)
@@ -38,11 +34,11 @@ sweepstake_3.register_contestant(contestant_7)
 sweepstake_3.register_contestant(contestant_8)
 sweepstake_3.register_contestant(contestant_9)
 
-# sweepstake_1.register_new_contestant()
-# sweepstake_2.register_new_contestant()
-# sweepstake_3.register_new_contestant()
+sweepstake_1.register_new_contestant()
+sweepstake_2.register_new_contestant()
+sweepstake_3.register_new_contestant()
 
-# Insert sweepstakes into a manager object - dependency injection
+# Insert sweepstakes into a manager object - dependency injection used to add new marketing firm to begin creating a new sweepstakes and choosing stack/queue management.
 marketing_firm_1 = MarketingFirmCreator.choose_manager_type("Top Sales LLC")
 marketing_firm_2 = MarketingFirmCreator.choose_manager_type("Sales R Us")
 marketing_firm_3 = MarketingFirmCreator.choose_manager_type("Premiere Marketing LLC")
@@ -53,15 +49,6 @@ winner_2 = sweepstake_2.pick_winner()
 winner_3 = sweepstake_3.pick_winner()
 
 # Print Contestant Info
-# sweepstake_1.print_contestant_info(winner_1)
 display_info_winner_1 = sweepstake_1.print_contestant_info(winner_1)
 display_info_winner_2 = sweepstake_1.print_contestant_info(winner_2)
 display_info_winner_3 = sweepstake_1.print_contestant_info(winner_3)
-
-# user_interface.get_user_input()
-
-user_interface.create_sweepstakes()
-# manage_sweepstakes_1 = user_interface.sweepstakes_management(sweepstake_1)
-# manage_sweepstakes_2 = user_interface.sweepstakes_management(sweepstake_2)
-# manage_sweepstakes_3 = user_interface.sweepstakes_management(sweepstake_3)
-
