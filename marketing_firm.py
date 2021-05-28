@@ -1,5 +1,4 @@
-import user_interface
-import marketing_firm_creator
+from sweepstake import Sweepstake
 
 
 class MarketingFirm:
@@ -7,6 +6,7 @@ class MarketingFirm:
     def __init__(self, manager):
         self.manager = manager
 
-
     def create_sweepstakes(self):
-        marketing_firm_creator.choose_manager_type()
+        sweepstakes_name = input('What is the name of your sweepstake?')
+        created_sweepstake = Sweepstake(sweepstakes_name)
+        return created_sweepstake

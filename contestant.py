@@ -1,5 +1,5 @@
 import user_interface
-import sweepstake
+# import sweepstake
 
 class Contestant:
 
@@ -11,4 +11,4 @@ class Contestant:
 
 
     def notify(self, is_winner):  # is_winner coming from Sweepstakes def pick_winner
-        winner = sweepstake.pick_winner(is_winner)
+        user_interface.notify_contestants(is_winner)
