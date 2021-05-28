@@ -5,20 +5,20 @@ from sweepstake import Sweepstake
 
 # marketing_firm = MarketingFirm()
 # marketing_firm_creator = MarketingFirmCreator()
-# user_interface.sweepstakes_management()
+
 
 # Create contestants
-contestant_1 = Contestant('Leighton', 'Schmidt', 'leighton@gmail.com', 1)
-contestant_2 = Contestant('Bob', 'Jefferson', 'bob@gmail.com', 2)
-contestant_3 = Contestant('Jessica', 'King', 'jessica@gmail.com', 3)
+contestant_1 = Contestant('Leighton', 'Schmidt', 'leighton@gmail.com', 100)
+contestant_2 = Contestant('Bob', 'Jefferson', 'bob@gmail.com', 200)
+contestant_3 = Contestant('Jessica', 'King', 'jessica@gmail.com', 300)
 
-contestant_4 = Contestant('James', 'Smith', 'james@gmail.com', 4)
-contestant_5 = Contestant('Lauren', 'Jensen', 'lauren@gmail.com', 5)
-contestant_6 = Contestant('Dylan', 'Bryant', 'dylan@gmail.com', 6)
+contestant_4 = Contestant('James', 'Smith', 'james@gmail.com', 400)
+contestant_5 = Contestant('Lauren', 'Jensen', 'lauren@gmail.com', 500)
+contestant_6 = Contestant('Dylan', 'Bryant', 'dylan@gmail.com', 600)
 
-contestant_7 = Contestant('Jordan', 'Holtz', 'jordan@gmail.com', 7)
-contestant_8 = Contestant('Carson', 'Joseph', 'carson@gmail.com', 8)
-contestant_9 = Contestant('Bennett', 'Jacob', 'bennett@gmail.com', 9)
+contestant_7 = Contestant('Jordan', 'Holtz', 'jordan@gmail.com', 700)
+contestant_8 = Contestant('Carson', 'Joseph', 'carson@gmail.com', 800)
+contestant_9 = Contestant('Bennett', 'Jacob', 'bennett@gmail.com', 900)
 
 # Create sweepstakes objects
 sweepstake_1 = Sweepstake('Chiefs tickets')
@@ -50,3 +50,13 @@ winner_3 = sweepstake_3.pick_winner()
 
 # Print Contestant Info
 # sweepstake_1.print_contestant_info(winner_1)
+display_info_winner_1 = sweepstake_1.print_contestant_info(winner_1)
+display_info_winner_2 = sweepstake_1.print_contestant_info(winner_2)
+display_info_winner_3 = sweepstake_1.print_contestant_info(winner_3)
+
+user_interface.get_user_input()
+
+# user_interface.create_sweepstakes()
+# manage_sweepstakes_1 = user_interface.sweepstakes_management(sweepstake_1)
+# manage_sweepstakes_2 = user_interface.sweepstakes_management(sweepstake_2)
+# manage_sweepstakes_3 = user_interface.sweepstakes_management(sweepstake_3)

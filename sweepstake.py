@@ -17,7 +17,7 @@ class Sweepstake:
     def pick_winner(self):   # randomly select one contestant object
         entry_list = list(self.contestants.items())
         is_winner = random.choice(entry_list)
-        print(is_winner)   # test. remove
+        # print(f'{is_winner[1].first_name} {is_winner[1].last_name} {is_winner[1].email_address}')  # test. remove
         return is_winner
 
 
